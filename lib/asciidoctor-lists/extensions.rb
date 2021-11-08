@@ -34,7 +34,7 @@ module AsciidoctorLists
           document.find_by(context: eval(element_name)).each do |element|
 
             if element.caption
-              references_asciidoc << %(#{element.caption}#{element.title} +)
+              references_asciidoc << %(xref:#{element.id}[#{element.title}] +)
             end
           end
 
